@@ -12,26 +12,26 @@
 	<div style="height: 300px">
 		<div id="login" >
 			<h1 align="center" id="timeShow">Login</h1>
-			<form action="index" method="post" align="center" onSubmit="return checkForm();">
+			<form action="index" method="post" align="center" >
 				<input type="text" name="adminName" required="required "
+				       id="name"
         placeholder="请输入账号" oninvalid="setCustomValidity('请输入账号！');"
 					oninput="setCustomValidity('');" /> <input type="password"
+										   id="password"
 					name="password" required="required " placeholder="请输入密码"
 					oninvalid="setCustomValidity('请输入密码！');"
 					oninput="setCustomValidity('');" />
-				<button class="but" type="submit" value="登录">登录</button>
+				<button class="but" type="sumit" value="登录" type="button"  onclick=Show() >登录</button>
 			</form>
 		</div>
 	</div>
-   <script>
-       function checkForm(){
-          if(adminname!='123'||password!='123'){
-               alert("账号或密码错误");
-		  return false;
+   <script type="text/javascript">
+       function Show(){
+          if(name.value=='123'&&password.value=='123'){
+                alert('登录成功！');
            }
            else{
-               alert('登录成功！');
-		   return true;
+                  alert('账号或密码错误!')
            }
        }
     </script>
