@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>模拟登录</title>
+
+<meta charset="UTF-8" />
+<link href="css/common.css" type="text/css" rel="stylesheet">
+</link>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body style="width: 1024px; margin: auto;">
+	<div style="height: 300px">
+		<div id="login" >
+			<h1 align="center" id="timeShow">Login</h1>
+			<form action="index" method="post" align="center" onSubmit="return checkForm();">
+				<input type="text" name="adminName" required="required "
+        placeholder="请输入账号" oninvalid="setCustomValidity('请输入账号！');"
+					oninput="setCustomValidity('');" /> <input type="password"
+					name="password" required="required " placeholder="请输入密码"
+					oninvalid="setCustomValidity('请输入密码！');"
+					oninput="setCustomValidity('');" />
+				<button class="but" type="reset" value="登录">登录</button>
+			</form>
+		</div>
+	</div>
+		<!-- 账号和密码错误给出提示 -->
+		<div style="text-align: center; margin-top: 20px;">
+    <script>
+       function checkForm(){
+          if(adminname!='123'||password!='123'){
+               alert("账号或密码错误");
+           }
+           else{
+               alert('登录成功！');
+           }
+       }
+    </script>
+		</div>
+</body>
+</html>
