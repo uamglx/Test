@@ -1,0 +1,54 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>模拟登录</title>
+
+<meta charset="UTF-8" />
+<link href="css/common.css" type="text/css" rel="stylesheet">
+</link>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body style="width: 1024px; margin: auto;">
+	<div style="height: 300px">
+		<div id="login" >
+			<h1 align="center" id="timeShow">Login</h1>
+			<form action="index" method="post" align="center" >
+				<input type="text" name="adminName" required="required "
+				       id="name"
+        placeholder="请输入账号" oninvalid="setCustomValidity('请输入账号！');"
+					oninput="setCustomValidity('');" /> 
+				<input type="password"
+										   id="password"
+					name="password" required="required " placeholder="请输入密码"
+					oninvalid="setCustomValidity('请输入密码！');"
+					oninput="setCustomValidity('');" />
+				<button class="but" type="sumit" value="登录" type="button"  onclick=aaa()/ >登录</button>
+			</form>
+		</div>
+	</div>
+	  <script>
+    function aaa(){
+        var a = document.getElementById("name").value;
+	var b=document.getElementById("password").value;
+	    alert(a);
+        if(a=="123"&&b=="123")
+        {
+              alert('登录成功！');
+        }else{
+             alert('账号或密码错误!');
+        }
+    }
+</script>
+   <script type="text/javascript">
+       function Show(){
+          if(name.value=='123'&&password.value=='123'){
+                alert('登录成功！');
+           }
+           else{
+                  alert('账号或密码错误!');
+           }
+       }
+    </script>
+</body>
+</html>
